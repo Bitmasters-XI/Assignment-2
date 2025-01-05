@@ -1,10 +1,12 @@
+//Header Files
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
 
+ 
 int main() {
-    srand(time(0));
-    int randomchoice = rand() %3;
+    srand(time(0)); //Initialize the random Number Generator with the current time
+    int randomchoice = rand() %3;  //Randomly selects a number between 0 and 2
     char  choice;
 
    // prompt user to enter their choice 
@@ -23,6 +25,7 @@ int main() {
     }
 
     // check for the choices
+    //If A user chooses a stone
     if (choice == 's') {
         if (randomchoice== 0){
             printf("It is a draw!!");
@@ -34,6 +37,7 @@ int main() {
             printf("You won!!");
         }
     }
+    //If the user choice is knife
     else if (choice == 'k')  {
         if (randomchoice == 0) {
             printf("You won!!");
@@ -45,6 +49,7 @@ int main() {
             printf("You lost!!");
         }
     }
+    //If the user choice paper
     else if (choice == 'p') {
         if (randomchoice == 0) {
             printf("You won!\n");
